@@ -1,0 +1,33 @@
+:root {
+    --main-font:"Roboto", sons-serif;
+    --input-border:1px solid #E5E7EB;
+    --invalid-border:1px solid #FF0000;
+    --btn-logo-backround:#596D48;
+    
+    --max-height:100%;
+    --max-width:100%;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+main {
+    height: var(--max-height);
+    width: var(--max-width);
+    background-color: antiquewhite;
+    display: flex;
+}
+
+.image-container {
+    height: var(--max-height);
+    width: 30%;
+    background-color: bisque;
+}
+
+.form-container {
+    height: var(--max-height);
+    width: 70%;
+    background-color:beige;
+}
