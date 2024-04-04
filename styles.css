@@ -7,7 +7,8 @@
     
     --max-height:100%;
     --max-width:100%;
-    --min-width: 45%;
+    --min-width: 170px;
+    --fieldset-height:31%;
 }
 
 body {
@@ -28,7 +29,7 @@ main {
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
     height: var(--max-height);
-    width: 30%;
+    width: 32%;
     min-width: var(--min-width);
     background-color: bisque;
 }
@@ -52,7 +53,7 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* width:none; */
+    
     min-width: 30%;
     min-height: 100%;
     height: 100%;
@@ -60,7 +61,7 @@ main {
 
 .odin-header {
     color: var(--logo-color);
-    font-size: 47px;
+    font-size: 43px;
     max-width: 70%;
     min-width: 30%;
     font-family: "IBM Plex Mono";
@@ -72,3 +73,19 @@ main {
     max-width: 100%;
     max-height: 100%;
 }
+
+form {
+    height: 100%;
+    width: 100%;
+}
+
+fieldset {
+    height: var(--fieldset-height);
+    border: 1px black solid;
+}
+
+.main-fieldset {
+    height: 100% - calc(--fieldset-height*2);
+}
+
+
