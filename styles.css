@@ -8,7 +8,8 @@
     --max-height:100%;
     --max-width:100%;
     --min-width: 170px;
-    --fieldset-height:31%;
+    --fieldset-height:30.6%;
+    --main-fieldset-max-height:100% - calc(var(--fieldset-height)*2);
 }
 
 body {
@@ -19,7 +20,7 @@ body {
 main {
     height: var(--max-height);
     width: var(--max-width);
-    background-color: antiquewhite;
+    /* background-color: antiquewhite; */
     display: flex;
 }
 
@@ -31,13 +32,13 @@ main {
     height: var(--max-height);
     width: 32%;
     min-width: var(--min-width);
-    background-color: bisque;
+    /* background-color: bisque; */
 }
 
 .form-container {
     height: var(--max-height);
     width: 70%;
-    background-color:beige;
+    /* background-color:beige; */
 }
 
 .text-logo-container {
@@ -75,17 +76,95 @@ main {
 }
 
 form {
+    display: flex;
+    flex-direction: column; 
+    gap: 10px;
     height: 100%;
     width: 100%;
 }
 
 fieldset {
     height: var(--fieldset-height);
-    border: 1px black solid;
+    border: none;
 }
 
 .main-fieldset {
-    height: 100% - calc(--fieldset-height*2);
+    box-shadow: 5px 5px 10px #cbcbcbac;
+    font-family: var(--main-font);
+    /* min-height: 100% - calc(var(--fieldset-height)*2); */
+    max-height: 100% - calc(var(--fieldset-height)*2);
+    display: flex;
+    flex-direction: column;
 }
 
+
+.main-fieldset > div {
+    /* padding-left: q0 px; */
+    font-family: var(--main-font);
+    width: 55%;
+    height: 60%;
+    display: flex;
+    justify-content: space-evenly; 
+    flex-wrap: wrap;
+    align-items: flex-start;
+    flex-direction:column;
+       
+    gap: 3px;
+}
+label {
+    font-size: 11px;
+    display: block;
+    /* width: 25%; */
+}
+
+input {
+    height: 17%;
+    /* display: inline; */
+    border: var(--input-border);
+    border-radius: 5px;
+    transition: 0.5;
+}
+
+
+
+.fieldset-one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;    
+}
+
+.fieldset-one > p {
+    font-size: 20px;
+    font-family: var(--main-font);
+    font-weight: bold;
+}
+
+span {
+    font-style: italic;
+}
+.fieldset-three {
+    font-family: var(--main-font);
+}
+
+a {
+    color: var(--btn-logo-backround);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+button {
+    width: 145px;
+    height: 35px;
+    background-color: #596D48;
+    color: white;
+    font-weight: 600;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #c8c7c7cc;
+}
+
+
+input:focus {
+    border: 1px solid white;
+}
 
